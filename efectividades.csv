@@ -1,0 +1,13 @@
+# Clase:,   Debil Contra:,  Fuerte Contra:
+Aquatic,    Plant,          Bug
+Aquatic,    Reptile,        Beast
+Bird,       Plant,          Bug
+Bird,       Reptile,        Beast
+Beast,      Bird,           Plant
+Beast,      Aquatic,        Reptile
+Bug,        Bird,           Plant
+Bug,        Aquatic,        Reptile
+Plant,      Beast,          Bird
+Plant,      Bug,            Aquatic
+Reptile,    Beast,          Bird
+Reptile,    Bug,            Aquatic

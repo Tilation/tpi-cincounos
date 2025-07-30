@@ -1,0 +1,193 @@
+# Body Part,Card Name,Part Type,Class,Attack Type,Energy Cost,Damage,Shield,Card Ability
+Anemone,Aqua Vitality,Back,Aquatic,Melee,1,80,35,Successful attacks restore 50 HP for each Anemone part this Axie possesses.
+Blue Moon,Scale Dart,Back,Aquatic,Ranged,1,120,30,Draw a card if target is in Last Stand.
+Hermit,Shelter,Back,Aquatic,,1,0,115,Disable critical strikes on this Axie during this round.
+Goldfish,Swift Escape,Back,Aquatic,Melee,1,105,20,Apply Speed+ to this Axie for 2 rounds when attacked.
+Perch,Spinal Tap,Back,Aquatic,Melee,1,100,20,Prioritize idle target when comboed with at least 2 additional cards.
+Sponge,Shipwreck,Back,Aquatic,Melee,1,60,90,Apply Attack+ to this Axie if its shield breaks.
+Anemone2,Aquaponics,Horn,Aquatic,Ranged,1,80,35,Successful attacks restore 50 HP for each Anemone part this Axie possesses.
+Babylonia,Shell Jab,Horn,Aquatic,Melee,1,100,50,Deal 130% damage when attacking an idle target.
+Clamshell,Clam Slash,Horn,Aquatic,Melee,1,110,40,Apply Attack+ to this Axie when attacking Beast, Bug, or Mech targets.
+Oranda,Hero's Bane,Horn,Aquatic,Ranged,1,120,30,End target's Last Stand.
+Shoal Star,Star Shuriken,Horn,Aquatic,Ranged,1,110,10,Target cannot enter Last Stand if this card brings its HP to zero.
+Teal Shell,Deep Sea Gore,Horn,Aquatic,Melee,1,50,80,Add 30% to this Axie's shield when attacking.
+Catfish,Swallow,Mouth,Aquatic,Melee,1,80,30,Heal this Axie by the damage inflicted with this card.
+Lam,Angry Lam,Mouth,Aquatic,Melee,1,110,40,Deal 120% damage when this Axie's HP is below 50%.
+Piranha,Crimson Water,Mouth,Aquatic,Melee,1,120,30,Target injured Axie if this Axie's HP is below 50%.
+Risky Fish,Fish Hook,Mouth,Aquatic,Melee,1,105,20,Apply Attack+ to this Axie when attacking Plant, Reptile, or Dusk targets.
+Koi,Upstream Swim,Tail,Aquatic,Melee,1,110,30,Apply Speed+ to this Axie for 2 rounds when comboed with another Aquatic class card.
+Navaga,Flanking Smack,Tail,Aquatic,Melee,0,100,40,Deal 120% damage if this Axie attacks first.
+Nimo,Tail Slap,Tail,Aquatic,Melee,0,20,0,Gain 1 energy when comboed with another card.
+Ranchu,Water Sphere,Tail,Aquatic,Melee,1,120,30,Apply Chill to target for 2 rounds
+Shrimp,Chitin Jump,Tail,Aquatic,Ranged,1,30,30,Prioiritzes furthest target.
+Tadpole,Black Bubble,Tail,Aquatic,Ranged,1,110,40,Apply Jinx to target for 2 rounds.
+Bubblemaker,,Ear,Aquatic,,,,,
+Gill,,Ear,Aquatic,,,,,
+Inkling,,Ear,Aquatic,,,,,
+Nimo2,,Ear,Aquatic,,,,,
+Seaslug,,Ear,Aquatic,,,,,
+Tiny Fan,,Ear,Aquatic,,,,,
+Clear,,Eye,Aquatic,,,,,
+Gero,,Eye,Aquatic,,,,,
+Sleepless,,Eye,Aquatic,,,,,
+Telescope,,Eye,Aquatic,,,,,
+Furball,Juggling Balls,Back,Beast,Ranged,1,40,30,Strike 3 times.
+Hero,Heroic Reward,Back,Beast,Melee,0,60,0,Draw a card when attacking an Aqua, Bird, or Dawn target.
+Jaguar,Nitro Leap,Back,Beast,Melee,1,120,35,Always strike first if this Axie is in Last Stand
+Risky Beast,Revenge Arrow,Back,Beast,Ranged,1,125,25,Deal 150% if this Axie is in Last Stand.
+Ronin,Single Combat,Back,Beast,Melee,1,75,0,Guaranteed critical strike when comboed with at least 2 other cards.
+Timber,Woodman Power,Back,Beast,Melee,1,80,80,Add shield equal to the damage this card deals against Plant targets.
+Arco,Acrobatic,Horn,Beast,Melee,1,100,50,Apply Speed+ to this Axie for 2 rounds when attacking.
+Dual Blade,Sinister Strike,Horn,Beast,Melee,1,130,20,Deal 200% damage on critical strikes.
+Imp,Ivory Stab,Horn,Beast,Melee,1,70,20,Gain 1 energy per critical strike dealt by your team this round.
+Little Branch,Branch Charge,Horn,Beast,Melee,1,125,25,Increase crit chance by 20% if chained or comboed with a Plant card.
+Merry,Merry Legion,Horn,Beast,Melee,1,65,85,Add 20% shield to this Axie when played in a chain.
+Pocky,Sugar Rush,Horn,Beast,Melee,1,125,20,Deal 10% additional damage for each allied Bug Axie.
+Axie Kiss,Death Mark,Mouth,Beast,Ranged,1,100,30,Apply Lethal to target if this Axie's HP is below 30%.
+Confident,Self Rally,Mouth,Beast,,0,0,40,Apply 2 Morale+ to this Axie for 2 rounds.
+Goda,Piercing Sound,Mouth,Beast,Ranged,1,80,40,Destroy 1 of your opponent's energy.
+Nut Cracker,Nut Crack,Mouth,Beast,Melee,1,105,30,Deal 120% damage when comboed with another "Nut Cracker" card.
+Cottontail,Luna Absorb,Tail,Beast,,0,0,30,Gain 1 energy.
+Gerbil,Gerbil Jump,Tail,Beast,Ranged,1,40,20,Skip the closest target if there are 2 or more enemies remaining.
+Hare,Hare Dagger,Tail,Beast,Ranged,1,120,30,Draw a card if this Axie attacks at the beginning of the round.
+Nut Cracker2,Nut Throw,Tail,Beast,Melee,1,105,30,Deal 120% damage when comboed with another "Nut Cracker" card.
+Rice,Night Steal,Tail,Beast,Ranged,1,80,10,Steal 1 energy from your opponent when comboed with another card.
+Shiba,Rampant Howl,Tail,Beast,Melee,1,120,30,Apply Morale+ to your team for 2 rounds if this Axie attacks while in Last Stand.
+Belieber,,Ear,Beast,,,,,
+Innocent Lamb,,Ear,Beast,,,,,
+Nut Cracker3,,Ear,Beast,,,,,
+Nyan,,Ear,Beast,,,,,
+Puppy,,Ear,Beast,,,,,
+Zen,,Ear,Beast,,,,,
+Chubby,,Eye,Beast,,,,,
+Little Peas,,Eye,Beast,,,,,
+Puppy2,,Eye,Beast,,,,,
+Zeal,,Eye,Beast,,,,,
+Balloon,Balloon Pop,Back,Bird,Ranged,0,40,0,Apply Fear to target for 1 turn. If depending, apply Fear to self until next round.
+Cupid,Heart Break,Back,Bird,Ranged,1,120,20,Apply Morale- to enemy for 2 rounds.
+Kingfisher,Patient Hunter,Back,Bird,Melee,1,130,0,Target an Aquatic class enemy if this Axie's HP is below 50%
+Pigeon Post,Blackmail,Back,Bird,Ranged,1,120,10,Transfer all debuffs on this Axie to target.
+Raven,Ill-omened,Back,Bird,Ranged,1,110,30,Apply Jinx to target for 2 rounds.
+Tri Feather,Triple Threat,Back,Bird,Ranged,0,35,10,Attack twice if this Axie has any debuffs.
+Cuckoo,Cockadoodledoo,Horn,Bird,,0,0,40,Apply Attack+ to this Axie.
+Eggshell,Eggbomb,Horn,Bird,Ranged,1,120,0,Apply Aroma on this Axie until next round.
+Kestrel,Headshot,Horn,Bird,Ranged,1,130,0,Disable target's horn cards next round.
+Feather Spear,Feather Lunge,Horn,Bird,Melee,1,110,50,Deal 120% damage when chained with another "Lunge" card.
+Trump,Air Force One,Horn,Bird,Melee,1,120,30,Deal 120% damage when chained with another "Trump" card.
+Wing Horn,Smart Shot,Horn,Bird,Ranged,1,50,10,Skip the closest target if there are 2 or more enemies remaining.
+Doubletalk,Soothing Song,Mouth,Bird,Ranged,1,80,0,Apply Sleep to target.
+Hungry Bird,Insectivore,Mouth,Bird,Melee,1,110,40,Target Bug class enemy if this Axie's HP is below 50%.
+Little Owl,Dark Swoop,Mouth,Bird,Melee,1,25,0,Target fastest enemy.
+Peace Maker,Peace Treaty,Mouth,Bird,Melee,1,120,30,Apply Attack- on target.
+Cloud,Puffy Smack,Tail,Bird,Melee,1,100,50,Skip targets that are in Last Stand.
+Feather Fan,Sunder Armor,Tail,Bird,Ranged,1,40,90,Add 20% shield to this Axie for each debuff it possesses.
+Granma's Fan,Cool Breeze,Tail,Bird,Ranged,1,120,30,Apply Chill to target for 2 rounds
+Post Fight,All-out Shot,Tail,Bird,Ranged,0,120,0,Inflict 30% of this Axie's max HP to itself.
+Swallow,Early Bird,Tail,Bird,Ranged,1,110,20,Deal 120% damage if this Axie attacks first.
+The Last One,Risky Feather,Tail,Bird,Ranged,1,150,0,Apply 2 Attack- to this Axie.
+Curly,,Ear,Bird,,,,,
+Early Bird,,Ear,Bird,,,,,
+Owl,,Ear,Bird,,,,,
+Peace Maker2,,Ear,Bird,,,,,
+Pink Cheek,,Ear,Bird,,,,,
+Risky Bird,,Ear,Bird,,,,,
+Little Owl2,,Eye,Bird,,,,,
+Lucas,,Eye,Bird,,,,,
+Mavis,,Eye,Bird,,,,,
+Robin,,Eye,Bird,,,,,
+Buzz Buzz,Bug Noise,Back,Bug,Ranged,1,100,40,Apply Attack- to target.
+Garish Worm,Barb Strike,Back,Bug,Ranged,1,100,50,Apply poison to target when played in a chain.
+Sandal,Bug Splat,Back,Bug,Melee,1,110,50,Deal 50% more damage when attacking Bug targets.
+Scarab,Scarab Curse,Back,Bug,Ranged,1,110,40,Target cannot be healed until next round.
+Snail Shell,Sticky Goo,Back,Bug,Melee,1,40,60,Stun attacker if this Axie's shield breaks. Can only trigger once per round.
+Spiky Wing,Buzzing Wind,Back,Bug,Ranged,0,10,30,Apply Fragile to target until next round.
+Antenna,Bug Signal,Horn,Bug,Ranged,1,80,60,Steal energy from your opponent when chained with another "Bug Signal" Card.
+Caterpillars,Grub Surprise,Horn,Bug,Ranged,1,100,50,Apply Fear to shielded targets.
+Lagging,Mystic Rush,Horn,Bug,Melee,0,40,0,Apply Speed- to target for 2 rounds.
+Leaf Bug,Disguise,Horn,Bug,Melee,0,20,20,Gain 1 energy when comboed with a Plant card.
+Parasite,Third Glance,Horn,Bug,Ranged,1,80,50,Randomly discard 1 card from your enemy's hand.
+Pliers,Dull Grip,Horn,Bug,Melee,1,110,30,Deal 30% more damage to shielded targets.
+Cute Bunny,Terror Chomp,Mouth,Bug,Melee,1,120,30,Apply Fear to target for 2 turns when played in a Chain.
+Mosquito,Blood Taste,Mouth,Bug,Melee,1,70,40,Heal this Axie by the damage inflicted with this card.
+Pincer,Sunder Claw,Mouth,Bug,Melee,0,20,0,Randomly discard 1 card from your enemy's hand.
+Square Teeth,Mite Bite,Mouth,Bug,Melee,0,30,0,Add 100% more damage when comboed with another card.
+Ant,Chemical Warfare,Tail,Bug,Melee,1,30,80,Apply Stench for 1 round.
+Fish Snack,Anesthetic Bait,Tail,Bug,Melee,1,60,80,Apply stun when struck by Aquatic or Bird class cards. Can only trigger once per round.
+Gravel Ant,Numbling Lecretion,Tail,Bug,Ranged,1,30,40,Disable target's melee cards next round.
+Pupae,Grub Explode,Tail,Bug,Melee,0,60,0,Deal 200% damage when attacking in Last Stand. Axie's Last Stand ends after it attacks.
+Thorny Caterpillar,Allergic Reaction,Tail,Bug,Melee,1,105,30,Deal 130% damage to debuffed targets.
+Twin Tail,Twin Needle,Tail,Bug,Ranged,0,30,0,Attack twice when comboed with another card.
+Beetle Spike,,Ear,Bug,,,,,
+Ear Breathing,,Ear,Bug,,,,,
+Earwing,,Ear,Bug,,,,,
+Larva,,Ear,Bug,,,,,
+Leaf Bug2,,Ear,Bug,,,,,
+Tassels,,Ear,Bug,,,,,
+Bookworm,,Eye,Bug,,,,,
+Kotaro?,,Eye,Bug,,,,,
+Neo,,Eye,Bug,,,,,
+Nerdy,,Eye,Bug,,,,,
+Bidens,Cleanse Scent,Back,Plant,,0,0,50,Remove all debuffs from this Axie.
+Mint,Refresh,Back,Plant,,0,0,50,Remove all debuffs from a teammate if it's directly in front (same row) of this Axie.
+Pumpkin,October Treat,Back,Plant,,1,0,110,Draw a card if this Axie's shield doesn't break this round.
+Shiitake,Shroom's Grace,Back,Plant,,1,0,40,Heal this Axie for 120 HP.
+Turnip,Turnip Rocket,Back,Plant,Ranged,1,60,80,Target a Bird if comboed with 2 or more cards.
+Watering Can,Aqua Stock,Back,Plant,Ranged,1,45,80,Gain 1 energy if this Axie is struck by an Aquatic card.
+Bamboo Shoot,Bamboo Clan,Horn,Plant,Melee,1,80,70,Increased 20% damage when chained with another Plant card.
+Beech,Wooden Stab,Horn,Plant,Melee,1,105,40,Deal 120% damage if this Axie's shield breaks.
+Cactus,Prickly Trap,Horn,Plant,Melee,1,110,20,Deal 120% damage if this Axie attacks last.
+Rose Bud,Healing Aroma,Horn,Plant,,1,0,40,Heal this Axie for 120 HP.
+Strawberry Shortcake,Sweet Party,Horn,Plant,,2,0,0,Heal front teammate for 270 HP. If there are no front teammates, heal this Axie instead.
+Watermelon,Seed Bullet,Horn,Plant,Ranged,1,30,50,Target fastest enemy.
+Herbivore,Vegan Diet,Mouth,Plant,Melee,1,75,75,Heal this Axie by the damage this card inflicts on a Plant target.
+Serious,Vegetal Bite,Mouth,Plant,Melee,1,30,30,Steal 1 energy from your opponent when comboed with another card.
+Silent Whisper,Forest Spirit,Mouth,Plant,,1,0,40,Heal front teammate for 190 HP.
+Zigzag,Drain Bite,Mouth,Plant,Melee,1,60,60,Heal this Axie by the damage this card inflicts.
+Carrot,Carrot Hammer,Tail,Plant,Melee,1,70,40,Gain 1 energy if this Axie's shield breaks. Can only trigger once per round.
+Cattail,Cattail Slap,Tail,Plant,Melee,0,20,30,Draw a card if struck by a Beast, Bug, or Mech card.
+Hatsune,Leek Leak,Tail,Plant,Melee,1,60,80,When hit, disable attacker's ranged cards next round.
+Hot Butt,Spicy Surprise,Tail,Plant,Melee,1,90,50,Disable target's mouth cards next round.
+Potato Leaf,Aqua Deflect,Tail,Plant,Melee,1,70,80,Cannot be targeted by Aquatic cards if this Axie has teammates remaining.
+Yam,Gas Unleash,Tail,Plant,Ranged,1,30,20,Apply poison each time this card is used to attack or defend.
+Clover,,Ear,Plant,,,,,
+Hollow,,Ear,Plant,,,,,
+Leafy,,Ear,Plant,,,,,
+Lotus,,Ear,Plant,,,,,
+Rosa,,Ear,Plant,,,,,
+Sakura,,Ear,Plant,,,,,
+Blossom,,Eye,Plant,,,,,
+Confused,,Eye,Plant,,,,,
+Cucumber Slice,,Eye,Plant,,,,,
+Papi,,Eye,Plant,,,,,
+Bone Sail,Ivory Chop,Back,Reptile,Melee,1,80,80,Draw a card if this Axie's shield breaks.
+Croc,Nile Strike,Back,Reptile,Ranged,1,90,60,Apply Speed- to target for 2 rounds.
+Green Thorns,Vine Dagger,Back,Reptile,Ranged,0,20,30,Double shield from this card when comboed with a Plant card.
+Indian Star,Bulkwark,Back,Reptile,Melee,1,20,80,Reflect 40% of melee damage back at attacker.
+Red Ear,Slippery Shield,Back,Reptile,Melee,1,10,135,Add 15% of this Axie's shield to adjacent teammates.
+Tri Spikes,Spike Throw,Back,Reptile,Ranged,1,80,50,Target enemy with lowest shield when comboed with 2 or more cards.
+Bumpy,Overgrow Keratin,Horn,Reptile,Melee,1,90,30,Recover 20 shield per turn.
+Cerastes,Surprise Invasion,Horn,Reptile,Melee,1,90,60,Deal 130% damage if target is faster than this Axie.
+Incisor,Disarm,Horn,Reptile,Melee,1,100,40,Apply Speed- to target for 2 rounds.
+Scaly Spear,Scaly Lunge,Horn,Reptile,Melee,1,100,50,Deal 120% damage when chained with another "Lunge" card.
+Scaly Spoon,Tiny Catapult,Horn,Reptile,Ranged,1,80,40,Reflect 50% of ranged damage back at attacker.
+Unko,Poo Fling,Horn,Reptile,Ranged,1,30,80,Apply Stench to target until end of round.
+Kotaro,Kotaro Bite,Mouth,Reptile,Melee,1,80,20,Gain 1 energy if target is faster than this Axie.
+Razor Bite,Why So Serious,Mouth,Reptile,Melee,1,90,50,Heal this Axie by damage inflicted with this card to Aquatic targets.
+Tiny Turtle,Chomp,Mouth,Reptile,Melee,1,80,50,Apply Stun to enemy when comboed with at least 2 additional cards.
+Toothless Bite,Sneaky Raid,Mouth,Reptile,Melee,1,20,40,Target furthest enemy.
+Gila,Neuro Toxin,Tail,Reptile,Ranged,1,100,55,Apply Attack- to poisoned targets.
+Grass Snake,Venom Spray,Tail,Reptile,Ranged,0,10,20,Apply Poison to target.
+Iguana,Scale Dart2,Tail,Reptile,Ranged,1,90,60,Generate 1 energy when attacking a buffed target.
+Snake Jar,Jar Barrage,Tail,Reptile,Ranged,1,80,20,Attacks that break this Axie's shield cannot deal additional damage. Can only trigger once per round.
+Tiny Dino,Tiny Swing,Tail,Reptile,Melee,1,80,40,Deal 150% damage after round 4.
+Wall Gecko,Critical Escape,Tail,Reptile,Melee,1,90,10,Reduce damage taken by 15% this round.
+Curved Spine,,Ear,Reptile,,,,,
+Friezard,,Ear,Reptile,,,,,
+Pogona,,Ear,Reptile,,,,,
+Sidebarb,,Ear,Reptile,,,,,
+Small Frill,,Ear,Reptile,,,,,
+Swirl,,Ear,Reptile,,,,,
+Scar,,Eye,Reptile,,,,,
+Topaz,,Eye,Reptile,,,,,
+Tricky,,Eye,Reptile,,,,,
+Gecko,,Eye,Reptile,,,,,
