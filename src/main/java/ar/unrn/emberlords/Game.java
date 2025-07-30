@@ -66,7 +66,7 @@ public class Game {
     }
     
     private void irAOtroMenu(GameScreen siguiente) {
-        if (currentScreen != null) {
+        if (currentScreen != null && !currentScreen.esVolatil()) {
             historialPantallas.push(currentScreen);
         }
         siguiente.alCrearPantalla(gameServiceFactory);

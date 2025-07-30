@@ -19,6 +19,12 @@ public abstract class GameScreen {
     public abstract void render();
 
     /**
+     * Indica si esta pantalla deberia guardarse en el historial para cuando se haga una vuelta a la pantalla anterior.
+     * @return un booleano indicando si deberia ser volatil, true indica que no se guarda en el historial.
+     */
+    public abstract boolean esVolatil();
+
+    /**
      * Permite a la pantalla ejecutar sus comportamientos reaccionando a una entrada del usuario.
      *
      * Handle input se llama cuando se detecta una entrada del teclado por parte del usuario.

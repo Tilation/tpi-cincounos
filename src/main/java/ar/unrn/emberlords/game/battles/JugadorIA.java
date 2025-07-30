@@ -9,27 +9,20 @@ import java.util.Random;
 
 public class JugadorIA extends JugadorAbstracto {
     private Random random;
-    private List<CriaturaBatallando> equipoEnemigo;
-    
     public JugadorIA(GameServiceFactory servicios) {
         super(servicios);
         this.random = new Random();
     }
-    
-    public void setEquipoEnemigo(List<CriaturaBatallando> equipoEnemigo) {
-        this.equipoEnemigo = equipoEnemigo;
-    }
 
     @Override
-    List<CartaJugada> jugarTurno() {
+    protected List<CartaJugada> jugarTurnoInterno(List<CriaturaBatallando> equipoEnemigo) {
         List<CartaJugada> acciones = new ArrayList<>();
         
         System.out.println("\n=== TURNO DE LA IA ===");
-        
-        // Jugar cartas mientras tenga energía y cartas
+
         while (energia > 0 && !mano.isEmpty()) {
-            // Buscar cartas que se puedan jugar
             List<Carta> cartasJugables = new ArrayList<>();
+
             for (Carta carta : mano) {
                 if (puedeJugarCarta(carta)) {
                     cartasJugables.add(carta);
@@ -37,10 +30,9 @@ public class JugadorIA extends JugadorAbstracto {
             }
             
             if (cartasJugables.isEmpty()) {
-                break; // No puede jugar más cartas
+                break;
             }
-            
-            // Seleccionar carta aleatoria
+
             Carta cartaSeleccionada = cartasJugables.get(random.nextInt(cartasJugables.size()));
             
             // Seleccionar criatura atacante aleatoria

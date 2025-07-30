@@ -31,7 +31,12 @@ public class MenuPrincipal extends GameScreen {
 
         GameScreenUtils.drawBoxBottom();
     }
-    
+
+    @Override
+    public boolean esVolatil() {
+        return false;
+    }
+
     @Override
     public MenuResult handleInput(String input) {
         switch (input) {

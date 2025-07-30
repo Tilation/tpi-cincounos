@@ -7,6 +7,11 @@ import ar.unrn.emberlords.menu.MenuResult;
  */
 public class MenuAyuda extends GameScreen {
     @Override
+    public boolean esVolatil() {
+        return true;
+    }
+
+    @Override
     public void render() {
         GameScreenUtils.clearScreen();
         GameScreenUtils.drawSimpleHeader("AYUDA");
@@ -24,7 +29,6 @@ public class MenuAyuda extends GameScreen {
         GameScreenUtils.drawEmptyBoxLine();
         GameScreenUtils.drawBoxLine("ENERGÍA:");
         GameScreenUtils.drawBoxLine("  • Cada turno tienes energía limitada para usar cartas");
-        GameScreenUtils.drawBoxLine("  • Algunas cartas otorgan energía adicional");
         GameScreenUtils.drawEmptyBoxLine();
         GameScreenUtils.drawBoxSeparator();
         GameScreenUtils.drawBoxLine("Presiona cualquier tecla para volver al menu anterior...");

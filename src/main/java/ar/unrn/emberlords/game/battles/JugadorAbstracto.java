@@ -5,6 +5,7 @@ import ar.unrn.emberlords.game.cards.Carta;
 import ar.unrn.emberlords.game.criaturas.Criatura;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class JugadorAbstracto {
@@ -14,7 +15,7 @@ public abstract class JugadorAbstracto {
     protected List<Carta> drawPile;
     protected List<Carta> discardPile;
     protected GameServiceFactory servicios;
-
+    protected List<CartaJugada> cartasAJugar;
 
     public JugadorAbstracto(GameServiceFactory servicios) {
         energia = 0;
@@ -22,6 +23,7 @@ public abstract class JugadorAbstracto {
         mano = new ArrayList<>();
         drawPile = new ArrayList<>();
         discardPile = new ArrayList<>();
+        cartasAJugar = new ArrayList<>();
         this.servicios = servicios;
     }
 
@@ -68,8 +70,23 @@ public abstract class JugadorAbstracto {
     }
     
     public void repartirCartas(int cantidad) {
-        for (int i = 0; i < cantidad && !drawPile.isEmpty(); i++) {
-            mano.add(drawPile.remove(0));
+        for (int i = 0; i < cantidad; i++) {
+            drawOne();
+        }
+    }
+
+    /**
+     * Toma una carta del mazo de cartas, si no hay, entonces mezcla la pila de descarte y la convierte en el mazo.
+     * El maximo de cartas que puede haber en la mano al mismo tiempo es 8, si tiene 8, entonces no toma cartas.
+     */
+    private void drawOne() {
+        if (drawPile.isEmpty()) {
+            drawPile.addAll(discardPile);
+            Collections.shuffle(drawPile);
+            discardPile.clear();
+        }
+        if (mano.size() < 8) {
+            mano.add(drawPile.removeFirst());
         }
     }
     
@@ -96,10 +113,19 @@ public abstract class JugadorAbstracto {
     }
     
     public List<Carta> getMano() {
-        return new ArrayList<>(mano);
+        ArrayList<Carta> cartas = new ArrayList<>();
+        cartas.addAll(mano);
+        for(var carta : cartasAJugar) {
+            cartas.remove(carta.getCarta());
+        }
+        return cartas;
     }
     
     public int getEnergia() {
+        int energia = this.energia;
+        for (var carta : cartasAJugar) {
+            energia = energia - carta.getCarta().getCostoEnergia();
+        }
         return energia;
     }
     
@@ -111,9 +137,36 @@ public abstract class JugadorAbstracto {
         return drawPile.size();
     }
 
+    public void forzarJugada(CartaJugada jugadas) {
+        cartasAJugar.add(jugadas);
+    }
+
+    public List<CartaJugada> jugarTurno(List<CriaturaBatallando> equipoEnemigo) {
+        List<CartaJugada> retorno;
+        if (cartasAJugar.isEmpty()){
+            retorno = jugarTurnoInterno(equipoEnemigo);
+        } else {
+            retorno = new ArrayList<>(cartasAJugar);
+            cartasAJugar.clear();
+        }
+        for(var carta : retorno) {
+            energia = energia - carta.getCarta().getCostoEnergia();
+            var card = carta.getCarta();
+            mano.remove(card);
+            discardPile.add(card);
+        }
+
+        return retorno;
+
+    }
+
     /**
      * Aca se van a tomar todas las decisiones del jugador y cuando el control sale de esta función
      * quiere decir que el turno acabó. Retorna la lista de Acciones que se van a hacer, en ese orden.
      */
-    abstract List<CartaJugada> jugarTurno();
+    protected abstract List<CartaJugada> jugarTurnoInterno(List<CriaturaBatallando> equipoEnemigo);
+
+    public List<CartaJugada> getCartasReservadas() {
+        return new ArrayList<>(cartasAJugar);
+    }
 }

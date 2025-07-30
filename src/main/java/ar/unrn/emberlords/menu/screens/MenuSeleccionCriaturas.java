@@ -49,7 +49,12 @@ public class MenuSeleccionCriaturas extends GameScreen {
 
         GameScreenUtils.drawBoxBottom();
     }
-    
+
+    @Override
+    public boolean esVolatil() {
+        return true;
+    }
+
     @Override
     public MenuResult handleInput(String input) {
         MenuResult resultado = MenuResult.continuar();;

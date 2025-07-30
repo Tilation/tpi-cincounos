@@ -1,6 +1,7 @@
 package ar.unrn.emberlords.game.battles;
 
 import ar.unrn.emberlords.game.GameServiceFactory;
+import ar.unrn.emberlords.game.cards.Carta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +11,27 @@ import java.util.List;
  * Cada equipo está compuesto por tres criaturas: una en la posición de atrás,
  * una en la posición del medio y una en la posición de adelante.
  * La batalla se puede crear con dos equipos y asignar las criaturas a cada uno de ellos.
- * TODO: fases de la batalla, turno de usar cartas y turno de resolucion de cartas.
+ * Inicio:
+ * 1. Preparar y mezclar las cartas de los equipos.
+ * Loop:
+ *   1. Repartir cartas.
+ *   2. Esperar a que ambos jugadores hayan terminado de elegir sus acciones o hayan pasado los 30 segundos.
+ *   3. Resolver cartas y acciones de ambos equipos, dependiendo de los stats de las criaturas.
+ *   4. Dañar y curar a las criaturas.
+ *   5. Si alguna criatura murió, calcular el modo berserk.
+ *   6. Si murió definitivamente, entonces recalcular el mazo y quitar sus cartas.
+ *   7. Si murieron todas las criaturas de un equipo, terminar.
+ * Fin:
+ * 1. Ganó el equipo con criaturas vivas.
+ *
  */
 public class Batalla {
+    private final static int ENERGIA_INICIAL = 3;
+    private final static int CARTAS_INICIAL = 5;
+
     private final GameServiceFactory gameServiceFactory;
     private static final java.util.Scanner sharedScanner = new java.util.Scanner(System.in);
+    private int turno = 0;
 
     private JugadorAbstracto jugador1;
     private JugadorAbstracto jugador2;
@@ -31,81 +48,52 @@ public class Batalla {
         }
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
-        
-        // Configurar referencias cruzadas para que cada jugador conozca las criaturas del oponente
-        if (jugador1 instanceof JugadorConsola) {
-            ((JugadorConsola) jugador1).setEquipoEnemigo(jugador2.getCriaturas());
-        }
-        if (jugador2 instanceof JugadorConsola) {
-            ((JugadorConsola) jugador2).setEquipoEnemigo(jugador1.getCriaturas());
-        }
-        if (jugador1 instanceof JugadorIA) {
-            ((JugadorIA) jugador1).setEquipoEnemigo(jugador2.getCriaturas());
-        }
-        if (jugador2 instanceof JugadorIA) {
-            ((JugadorIA) jugador2).setEquipoEnemigo(jugador1.getCriaturas());
-        }
     }
 
-    public void comenzar() {
-        /*
-        * Inicio:
-        * 1. Preparar y mezclar las cartas de los equipos.
-        * Loop:
-        *   1. Repartir cartas.
-        *   2. Esperar a que ambos jugadores hayan terminado de elegir sus acciones o hayan pasado los 30 segundos.
-        *   3. Resolver cartas y acciones de ambos equipos, dependiendo de los stats de las criaturas.
-        *   4. Dañar y curar a las criaturas.
-        *   5. Si alguna criatura murió, calcular el modo berserk.
-        *   6. Si murió definitivamente, entonces recalcular el mazo y quitar sus cartas.
-        *   7. Si murieron todas las criaturas de un equipo, terminar.
-        * Fin:
-        * 1. Ganó el equipo con criaturas vivas.
-        * */
-        
-        System.out.println("🔥 ¡BATALLA INICIADA! 🔥");
-        prepararMazos();
-        
-        int turno = 1;
-        while (true) {
-            System.out.printf("\n═══════════════ TURNO %d ═══════════════%n", turno);
-            
-            // Dar energía a ambos jugadores
-            jugador1.ganarEnergia(3);
-            jugador2.ganarEnergia(3);
-            
-            // Repartir cartas
-            repartirCartas();
-            
-            // Turnos de jugadores
-            var cartasJugadasJ1 = jugador1.jugarTurno();
-            var cartasJugadasJ2 = jugador2.jugarTurno();
-            
-            // Resolver acciones
-            resolverAcciones(cartasJugadasJ1, cartasJugadasJ2);
-            
-            // Verificar condición de victoria
-            if (!jugador1.tieneConCriaturasVivas()) {
-                System.out.println("\n🎉 ¡JUGADOR 2 (IA) GANA! 🎉");
-                break;
-            }
-            if (!jugador2.tieneConCriaturasVivas()) {
-                System.out.println("\n🎉 ¡JUGADOR 1 GANA! 🎉");
-                break;
-            }
-            
-            turno++;
-            
-            // Pausa para que el usuario pueda leer
-            System.out.println("\nPresiona Enter para continuar al siguiente turno...");
-            try {
-                sharedScanner.nextLine();
-            } catch (Exception e) {
-                // Ignorar error
-            }
-        }
-        
-        mostrarResultadoFinal();
+    /**
+     * Inicializa las cartas y la energia de los jugadores, reparte 5 cartas a cada jugador.
+     */
+    public void inicializar() {
+        jugador1.gastarEnergia(jugador1.getEnergia());
+        jugador1.ganarEnergia(ENERGIA_INICIAL);
+        jugador1.prepararMazo();
+        jugador1.mezclarMazo();
+        jugador1.repartirCartas(CARTAS_INICIAL);
+
+        jugador2.gastarEnergia(jugador2.getEnergia());
+        jugador2.ganarEnergia(ENERGIA_INICIAL);
+        jugador2.prepararMazo();
+        jugador2.mezclarMazo();
+        jugador2.repartirCartas(CARTAS_INICIAL);
+
+        turno = 1;
+    }
+
+    public void ejecutarTurno() {
+        var cartasJugadasJ1 = jugador1.jugarTurno(jugador2.getCriaturas());
+        var cartasJugadasJ2 = jugador2.jugarTurno(jugador1.getCriaturas());
+        resolverAcciones(cartasJugadasJ1, cartasJugadasJ2);
+        turno = turno + 1;
+        jugador1.repartirCartas(2);
+        jugador2.repartirCartas(2);
+        jugador1.ganarEnergia(2);
+        jugador2.ganarEnergia(2);
+    }
+
+    public List<CriaturaBatallando> getCriaturasVivasJ1() {
+        return jugador1.getCriaturasVivas();
+    }
+
+    public List<CriaturaBatallando> getCriaturasVivasJ2() {
+        return jugador2.getCriaturasVivas();
+    }
+
+    public void forzarJugadaJ1(CartaJugada jugada) {
+        jugador1.forzarJugada(jugada);
+    }
+
+    public void forzarJugadaJ2(CartaJugada jugada) {
+        jugador2.forzarJugada(jugada);
     }
 
     private void resolverAcciones(List<CartaJugada> cartasJugadasJ1, List<CartaJugada> cartasJugadasJ2) {
@@ -188,11 +176,7 @@ public class Batalla {
      */
     private void prepararMazos(){
         System.out.println("Preparando mazos...");
-        jugador1.prepararMazo();
-        jugador1.mezclarMazo();
-        
-        jugador2.prepararMazo();
-        jugador2.mezclarMazo();
+
         
         System.out.printf("Jugador 1 tiene %d cartas en su mazo.%n", jugador1.getDrawPileSize());
         System.out.printf("Jugador 2 tiene %d cartas en su mazo.%n", jugador2.getDrawPileSize());
@@ -255,5 +239,25 @@ public class Batalla {
     
     public List<CriaturaBatallando> getCriaturasJugador2() {
         return jugador2 != null ? jugador2.getCriaturas() : new ArrayList<>();
+    }
+    
+    public List<Carta> getCartasJugador1() {
+        return jugador1 != null ? jugador1.getMano() : new ArrayList<>();
+    }
+
+    public List<CartaJugada> getCartasReservadasJugador1() {
+        return jugador1.getCartasReservadas();
+    }
+
+    public List<CartaJugada> getCartasReservadasJugador2() {
+        return jugador2.getCartasReservadas();
+    }
+
+    public int getEnergiaJugador1() {
+        return jugador1 != null ? jugador1.getEnergia() : 0;
+    }
+    
+    public boolean esJugador1Humano() {
+        return jugador1 instanceof JugadorConsola;
     }
 }
