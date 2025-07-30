@@ -5,6 +5,9 @@ import ar.unrn.emberlords.game.criaturas.Estadisticas;
 import ar.unrn.emberlords.game.enums.clases.Clase;
 import ar.unrn.emberlords.game.local.csv.ClaseCSV;
 
+/**
+ * Builder que crea Clases a partir de datos CSV.
+ */
 public class ClaseBuilder implements EntityBuilder<ClaseCSV, Clase> {
 
     @Override

@@ -11,6 +11,9 @@ import ar.unrn.emberlords.game.repositorios.TipoPartesRepositorio;
 import ar.unrn.emberlords.game.visitors.ClaveVisitable;
 import ar.unrn.emberlords.game.visitors.ClaveVisitor;
 
+/**
+ * Repositorio local de Partes, respaldado por un archivo CSV
+ */
 public class RepositorioPartesLocal extends RepositorioLocalCSV<String, Parte, ParteCSV> implements PartesRepositorio {
     private final ClasesRepositorio clasesRepo;
     private final TipoPartesRepositorio tipoPartesRepo;

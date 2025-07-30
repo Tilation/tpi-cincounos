@@ -3,7 +3,7 @@ package ar.unrn.emberlords.menu.screens;
 import ar.unrn.emberlords.menu.MenuResult;
 
 /**
- * Pantalla del menú principal del juego
+ * Pantalla de victoria de un jugador al finalizar la batalla.
  */
 public class GanoJugador extends GameScreen {
     private final String nombre;

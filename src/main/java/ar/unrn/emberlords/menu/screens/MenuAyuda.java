@@ -23,7 +23,7 @@ public class MenuAyuda extends GameScreen {
         GameScreenUtils.drawEmptyBoxLine();
         GameScreenUtils.drawBoxLine("MECÁNICAS BÁSICAS:");
         GameScreenUtils.drawBoxLine("  • Cada criatura tiene 6 partes: Back, Horn, Mouth, Tail, Ear, Eye");
-        GameScreenUtils.drawBoxLine("  • Cada parte otorga una carta única con diferentes habilidades");
+        GameScreenUtils.drawBoxLine("  • Cada 4 de las 6 partes otorgan una carta única con diferentes habilidades");
         GameScreenUtils.drawBoxLine("  • Las estadísticas incluyen: HP, Speed, Skill, Morale");
         GameScreenUtils.drawBoxLine("  • El sistema de tipos afecta el daño (Aquatic/Plant/Beast/Bug/Bird/Reptile)");
         GameScreenUtils.drawEmptyBoxLine();

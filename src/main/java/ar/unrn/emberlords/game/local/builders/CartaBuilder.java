@@ -6,6 +6,9 @@ import ar.unrn.emberlords.game.local.csv.CartaCSV;
 import ar.unrn.emberlords.game.repositorios.PartesRepositorio;
 import ar.unrn.emberlords.game.repositorios.TipoAtaqueRepositorio;
 
+/**
+ * Builder que crea Cartas a partir de datos CSV.
+ */
 public class CartaBuilder implements EntityBuilder<CartaCSV, Carta> {
     private final PartesRepositorio partesRepo;
     private final TipoAtaqueRepositorio tipoAtaqueRepo;

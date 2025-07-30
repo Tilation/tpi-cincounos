@@ -9,6 +9,9 @@ import ar.unrn.emberlords.game.repositorios.ClasesRepositorio;
 import ar.unrn.emberlords.game.repositorios.EfectividadesRepositorio;
 import ar.unrn.emberlords.game.repositorios.PartesRepositorio;
 
+/**
+ * Builder que crea Efectividades a partir de datos CSV.
+ */
 public class EfectividadClaseBuilder implements EntityBuilder<EfectividadCSV, EfectividadClase> {
     private final ClasesRepositorio clasesRepo;
 

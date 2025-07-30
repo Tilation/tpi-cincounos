@@ -14,6 +14,9 @@ import ar.unrn.emberlords.game.visitors.ClaveVisitor;
 
 import java.util.Objects;
 
+/**
+ * Repositorio local de Cartas, respaldado por un archivo CSV
+ */
 public class RepositorioCartasLocal extends RepositorioLocalCSV<String, Carta, CartaCSV> implements CartasRepositorio {
     private final PartesRepositorio partesRepo;
     private final TipoAtaqueRepositorio tipoAtaqueRepo;

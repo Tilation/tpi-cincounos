@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
+/**
+ * Repositorio local de Criaturas, respaldado por un archivo CSV
+ */
 public class RepositorioCriaturasLocal extends RepositorioLocalCSV<String,Criatura,CriaturaCSV> implements CriaturasRepositorio {
     private final ClasesRepositorio clasesRepositorio;
     private final PartesRepositorio partesRepositorio;

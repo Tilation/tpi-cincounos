@@ -14,6 +14,9 @@ import ar.unrn.emberlords.game.visitors.ClaveVisitor;
 import java.io.IOException;
 import java.nio.file.Path;
 
+/**
+ * Repositorio local de Tipos de ataque, respaldado por un archivo CSV
+ */
 public class RepositorioTipoAtaqueLocal extends RepositorioLocalCSV<String, TipoAtaque, TipoAtaqueCSV> implements TipoAtaqueRepositorio {
 
     @Override

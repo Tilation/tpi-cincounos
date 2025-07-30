@@ -9,6 +9,9 @@ import ar.unrn.emberlords.game.repositorios.TipoPartesRepositorio;
 import ar.unrn.emberlords.game.visitors.ClaveVisitable;
 import ar.unrn.emberlords.game.visitors.ClaveVisitor;
 
+/**
+ * Repositorio local de Tipos de parte, respaldado por un archivo CSV
+ */
 public class RepositorioTipoPartesLocal extends RepositorioLocalCSV<String, TipoParte, TipoParteCSV> implements TipoPartesRepositorio {
 
     @Override

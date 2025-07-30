@@ -21,6 +21,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Repositorio local de Efectividades, respaldado por un archivo CSV
+ */
 public class RepositorioEfectividadesLocal extends RepositorioLocalCSV<Clase, EfectividadClase, EfectividadCSV> implements EfectividadesRepositorio {
     private final ClasesRepositorio clasesRepo;
 

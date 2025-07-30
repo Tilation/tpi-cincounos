@@ -9,6 +9,9 @@ import ar.unrn.emberlords.game.repositorios.ClasesRepositorio;
 import ar.unrn.emberlords.game.visitors.ClaveVisitable;
 import ar.unrn.emberlords.game.visitors.ClaveVisitor;
 
+/**
+ * Repositorio local de Clases, respaldado por un archivo CSV
+ */
 public class RepositorioClasesLocal extends RepositorioLocalCSV<String, Clase, ClaseCSV> implements ClasesRepositorio {
 
     @Override

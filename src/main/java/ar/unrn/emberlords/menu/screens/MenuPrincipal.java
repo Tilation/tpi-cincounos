@@ -22,7 +22,7 @@ public class MenuPrincipal extends GameScreen {
         
         // Descripción del juego
         GameScreenUtils.drawBoxLine("Un juego de combate por turnos inspirado en Axie Infinity.");
-        GameScreenUtils.drawBoxLine("Controla equipos de 3 criaturas con diferentes partes del cuerpo.");
+        GameScreenUtils.drawBoxLine("Controla equipos de 3 criaturas con diferentes partes.");
         GameScreenUtils.drawBoxLine("Cada parte otorga cartas únicas para la batalla.");
         GameScreenUtils.drawBoxSeparator();
         

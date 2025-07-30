@@ -169,36 +169,16 @@ public class Batalla {
             System.out.printf("💀 %s ha sido derrotada!%n", objetivo.getCriatura().getNombre());
         }
     }
-
-    /**
-     * TODO: Deberia preparar las cartas de los jugadores, iniciar una instancia de randomizer para cada uno
-     * mezclar las cartas y dejar todo listo para poder empezar a agarrar cartas del mazo a la mano del jugador.
-     */
-    private void prepararMazos(){
-        System.out.println("Preparando mazos...");
-
-        
-        System.out.printf("Jugador 1 tiene %d cartas en su mazo.%n", jugador1.getDrawPileSize());
-        System.out.printf("Jugador 2 tiene %d cartas en su mazo.%n", jugador2.getDrawPileSize());
-    }
-
-    /**
-     * TODO: debería repartir las cartas a los jugadores, de sus mazos a la mano.
-     * Tiene que chequear que hayan cartas suficientes en el draw deck, y si no hay entonces tiene que
-     * tomar las cartas del deck de descarte, mezclarlas y pasarlas al draw deck y luego continuar repartiendo las cartas.
-     */
-    private void repartirCartas(){
-        // Repartir 5 cartas a cada jugador
-        jugador1.repartirCartas(5);
-        jugador2.repartirCartas(5);
-    }
     
     private void mostrarResultadoFinal() {
         System.out.println("\n═══════════════ RESULTADO FINAL ═══════════════");
         
         System.out.println("\nJugador 1:");
         for (var criatura : jugador1.getCriaturas()) {
-            String estado = criatura.estaViva() ? "VIVA" : "MUERTA";
+            String estado = "MUERTA";
+            if (criatura.estaViva()) { 
+                estado = "VIVA";   
+            }
             System.out.printf("  %s [%d/%d HP] - %s%n", 
                 criatura.getCriatura().getNombre(),
                 criatura.getVidaActual(),
@@ -206,17 +186,18 @@ public class Batalla {
                 estado);
         }
         
-        System.out.println("\nJugador 2 (IA):");
+        System.out.println("\nJugador 2 (PC):");
         for (var criatura : jugador2.getCriaturas()) {
-            String estado = criatura.estaViva() ? "VIVA" : "MUERTA";
+            String estado = "MUERTA";
+            if (criatura.estaViva()) { 
+                estado = "VIVA";   
+            }
             System.out.printf("  %s [%d/%d HP] - %s%n", 
                 criatura.getCriatura().getNombre(),
                 criatura.getVidaActual(),
                 criatura.getVidaMaxima(),
                 estado);
         }
-        
-        System.out.println("\n¡Gracias por jugar!");
     }
     
     public boolean estaTerminada() {
@@ -227,22 +208,34 @@ public class Batalla {
         if (jugador1.tieneConCriaturasVivas()) {
             return "Jugador 1";
         } else if (jugador2.tieneConCriaturasVivas()) {
-            return "Jugador 2 (IA)";
+            return "Jugador 2 (PC)";
         } else {
             return "Empate";
         }
     }
     
     public List<CriaturaBatallando> getCriaturasJugador1() {
-        return jugador1 != null ? jugador1.getCriaturas() : new ArrayList<>();
+        List<CriaturaBatallando> retorno = new ArrayList<>();
+        if (jugador1 != null) {
+            retorno = jugador1.getCriaturas();
+        }
+        return retorno;
     }
     
     public List<CriaturaBatallando> getCriaturasJugador2() {
-        return jugador2 != null ? jugador2.getCriaturas() : new ArrayList<>();
+        List<CriaturaBatallando> retorno = new ArrayList<>();
+        if (jugador2 != null) {
+            retorno = jugador2.getCriaturas();
+        }
+        return retorno;
     }
     
     public List<Carta> getCartasJugador1() {
-        return jugador1 != null ? jugador1.getMano() : new ArrayList<>();
+        List<Carta> retorno = new ArrayList<>();
+        if (jugador1 != null) {
+            retorno = jugador1.getMano();
+        }
+        return retorno;
     }
 
     public List<CartaJugada> getCartasReservadasJugador1() {
@@ -254,7 +247,11 @@ public class Batalla {
     }
 
     public int getEnergiaJugador1() {
-        return jugador1 != null ? jugador1.getEnergia() : 0;
+        int retorno = 0;
+        if (jugador1 != null) {
+            retorno = jugador1.getEnergia();
+        }
+        return retorno;
     }
     
     public boolean esJugador1Humano() {

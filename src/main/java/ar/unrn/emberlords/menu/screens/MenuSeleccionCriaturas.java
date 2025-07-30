@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Pantalla del menú principal del juego
+ * Pantalla pre batalla donde se seleccionan las criaturas del jugador. Deja elegir 3 criaturas diferentes.
  */
 public class MenuSeleccionCriaturas extends GameScreen {
     private Random random;

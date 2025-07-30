@@ -6,6 +6,9 @@ import ar.unrn.emberlords.game.local.csv.CriaturaCSV;
 import ar.unrn.emberlords.game.repositorios.ClasesRepositorio;
 import ar.unrn.emberlords.game.repositorios.PartesRepositorio;
 
+/**
+ * Builder que crea Criaturas a partir de datos CSV.
+ */
 public class CriaturaBuilder implements EntityBuilder<CriaturaCSV, Criatura> {
     private final ClasesRepositorio clasesRepo;
     private final PartesRepositorio partesRepo;

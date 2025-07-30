@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
+/**
+ * Repositorio abstracto que permite cargar los datos desde un archivo csv y usar un builder / parser
+ * para construir las entidades.
+ */
 public abstract class RepositorioLocalCSV<TClave, TValor extends ClaveVisitable<TClave>, TCSV> extends RepositorioLocal<TClave, TValor> {
 
     /**

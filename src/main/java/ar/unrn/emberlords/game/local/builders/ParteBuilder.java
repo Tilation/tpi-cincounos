@@ -6,6 +6,9 @@ import ar.unrn.emberlords.game.local.csv.ParteCSV;
 import ar.unrn.emberlords.game.repositorios.ClasesRepositorio;
 import ar.unrn.emberlords.game.repositorios.TipoPartesRepositorio;
 
+/**
+ * Builder que crea Partes a partir de datos CSV.
+ */
 public class ParteBuilder implements EntityBuilder<ParteCSV, Parte> {
     private final ClasesRepositorio clasesRepo;
     private final TipoPartesRepositorio tipoPartesRepo;
