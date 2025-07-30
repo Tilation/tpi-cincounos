@@ -1,0 +1,106 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="Fl91M4oZMganUbsesKwY">
+    <mxGraphModel dx="2237" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-5" value="Batalla" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-720" y="60" width="840" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-6" value="Equipo 1" style="swimlane;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="20" y="70" width="280" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-8" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-6" vertex="1">
+          <mxGeometry x="45" y="60" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-9" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-6" vertex="1">
+          <mxGeometry x="45" y="155" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-10" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-6" vertex="1">
+          <mxGeometry x="45" y="250" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-11" value="Equipo 2" style="swimlane;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="460" y="70" width="280" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-12" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-11" vertex="1">
+          <mxGeometry x="45" y="60" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-13" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-11" vertex="1">
+          <mxGeometry x="45" y="155" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-14" value="Axie&lt;br&gt;Clase&lt;br&gt;&lt;div&gt;PARTE,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PARTE,&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-11" vertex="1">
+          <mxGeometry x="45" y="250" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-18" target="XJdaTk5JwvclIXsSWRYB-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-18" value="INICIO" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="340" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-23" value="Fase de juego de Cartas" style="swimlane;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="110" y="455" width="405" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="XJdaTk5JwvclIXsSWRYB-23" source="XJdaTk5JwvclIXsSWRYB-19" target="XJdaTk5JwvclIXsSWRYB-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-19" value="Ambos equipos seleccionan cartas para usar" style="whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-23" vertex="1">
+          <mxGeometry x="160" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-26" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="XJdaTk5JwvclIXsSWRYB-23" source="XJdaTk5JwvclIXsSWRYB-25" target="XJdaTk5JwvclIXsSWRYB-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-25" value="Ambos terminaron" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XJdaTk5JwvclIXsSWRYB-23" vertex="1">
+          <mxGeometry x="300" y="85" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="XJdaTk5JwvclIXsSWRYB-23" source="XJdaTk5JwvclIXsSWRYB-42" target="XJdaTk5JwvclIXsSWRYB-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-42" value="Barajada de cartas" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-23" vertex="1">
+          <mxGeometry x="20" y="95" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-34" value="SI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-25" target="XJdaTk5JwvclIXsSWRYB-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-33" target="XJdaTk5JwvclIXsSWRYB-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-33" value="Recalculación de velocidades de cada Axie según la ecuación." style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="560" y="550" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-35" value="Fase de resolución" style="swimlane;whiteSpace=wrap;html=1;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="390" y="660" width="380" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="XJdaTk5JwvclIXsSWRYB-35" source="XJdaTk5JwvclIXsSWRYB-38" target="XJdaTk5JwvclIXsSWRYB-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-38" value="Activacion de todos los escudos de las cartas jugadas." style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-35" vertex="1">
+          <mxGeometry x="170" y="40" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="XJdaTk5JwvclIXsSWRYB-35" source="XJdaTk5JwvclIXsSWRYB-40" target="XJdaTk5JwvclIXsSWRYB-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-40" value="Se juegan las cartas, ordenadas por la velocidad del Axie" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="XJdaTk5JwvclIXsSWRYB-35" vertex="1">
+          <mxGeometry x="177.5" y="140" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-47" value="Murieron todos los Axie de un equipo" style="rhombus;whiteSpace=wrap;html=1;spacingBottom=15;spacingLeft=15;spacingRight=15;spacingTop=15;spacing=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="XJdaTk5JwvclIXsSWRYB-35" vertex="1">
+          <mxGeometry x="30" y="125" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-36" target="XJdaTk5JwvclIXsSWRYB-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-36" value="Recalculación de las cartas disponibles (las cartas de los axies muertos no cuentan)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="75" y="700" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-49" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-47" target="XJdaTk5JwvclIXsSWRYB-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-50" value="FIN" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="XJdaTk5JwvclIXsSWRYB-5" vertex="1">
+          <mxGeometry x="340" y="910" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XJdaTk5JwvclIXsSWRYB-51" value="SI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="XJdaTk5JwvclIXsSWRYB-5" source="XJdaTk5JwvclIXsSWRYB-47" target="XJdaTk5JwvclIXsSWRYB-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
