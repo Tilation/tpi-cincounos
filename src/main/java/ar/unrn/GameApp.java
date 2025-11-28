@@ -1,7 +1,8 @@
 package ar.unrn;
 
+import ar.unrn.emberlords.LanternaGame;
 import ar.unrn.emberlords.game.local.LocalGameServiceFactory;
-import ar.unrn.emberlords.Game;
+import ar.unrn.emberlords.pantallas.PantallaFactory;
 
 /**
  * Fuentes usadas para el proyecto:
@@ -18,8 +19,9 @@ public class GameApp {
     public static void main(String[] args) {
         try {
             LocalGameServiceFactory serviceFactory = new LocalGameServiceFactory();
-            Game game = new Game(serviceFactory);
-            game.run();
+            PantallaFactory pantallaFactory = new PantallaFactory(serviceFactory);
+            LanternaGame game = new LanternaGame(serviceFactory, pantallaFactory);
+            game.start();
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
