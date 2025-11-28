@@ -25,15 +25,35 @@ public class PantallaHelpers {
         tg.drawRectangle(new TerminalPosition(0,0), size, caracter);
     }
 
-    public static void dibujarTitulo(Screen screen, TextGraphics tg, String titulo) {
-        dibujarTitulo(screen, tg, titulo, '█');
+    public static void dibujarPie(Screen screen, TextGraphics tg, String pie, char separador, boolean centradoHorizontalmente) {
+        TerminalSize size = screen.getTerminalSize();
+        int ancho = size.getColumns();
+        int alto = size.getRows();
+
+        int startRow = size.getRows() - 2;
+        int separatorRow = alto - 3;
+        int textRow = separatorRow + 1;
+        int startColumn = 0;
+        if (centradoHorizontalmente) {
+            startColumn = (ancho - pie.length()) / 2;
+        }
+
+        tg.drawLine(0, separatorRow, size.getColumns(), separatorRow, separador);
+        tg.putString(2 + startColumn,textRow, pie);
     }
 
-    public static void dibujarTitulo(Screen screen, TextGraphics tg, String titulo, char separador) {
+    public static void dibujarTitulo(Screen screen, TextGraphics tg, String titulo, boolean centradoHorizontalmente) {
+        dibujarTitulo(screen, tg, titulo, '█', centradoHorizontalmente);
+    }
+
+    public static void dibujarTitulo(Screen screen, TextGraphics tg, String titulo, char separador, boolean centradoHorizontalmente) {
         TerminalSize size = screen.getTerminalSize();
         int screenWidth = size.getColumns() - 4;
 
-        int startColumn = (screenWidth - titulo.length()) / 2;
+        int startColumn = 0;
+        if (centradoHorizontalmente) {
+            startColumn = (screenWidth - titulo.length()) / 2;
+        }
 
         tg.drawLine(0,2,size.getColumns(), 2,separador);
         tg.putString(2 + startColumn,1,titulo);

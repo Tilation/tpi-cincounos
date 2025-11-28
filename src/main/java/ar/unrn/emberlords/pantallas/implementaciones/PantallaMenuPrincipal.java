@@ -4,7 +4,6 @@ import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
 import ar.unrn.emberlords.pantallas.PantallaFactory;
 import ar.unrn.emberlords.pantallas.PantallaHelpers;
-import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -16,10 +15,10 @@ public class PantallaMenuPrincipal implements Pantalla {
     private final PantallaFactory pantallaFactory;
     private int selectedOption = 0;
 
-    private static final String[] options = {"Jugar Batalla", "Bestiario", "Ayuda", "Salir"};
+    private static final String[] options = {"Jugar Batalla", "Catalogos", "Ayuda", "Salir"};
 
     private static final int IND_JUGAR = 0;
-    private static final int IND_BESTIARIO = 1;
+    private static final int IND_CATALOGOS = 1;
     private static final int IND_AYUDA = 2;
     private static final int IND_SALIR = 3;
 
@@ -33,7 +32,9 @@ public class PantallaMenuPrincipal implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, "Menu principal");
+        PantallaHelpers.dibujarTitulo(screen, tg, "Menu principal", true);
+
+        PantallaHelpers.dibujarPie(screen, tg, "Usa ↑↓ para navegar, enter para seleccionar", '0', true);
 
         for (int i = 0; i < options.length; i++) {
             if (i == selectedOption) {
@@ -46,9 +47,6 @@ public class PantallaMenuPrincipal implements Pantalla {
                 tg.putString(12, 8 + i, "   " + options[i]);
             }
         }
-
-        tg.setForegroundColor(TextColor.ANSI.WHITE);
-        tg.putString(10, 20, "Use Up/Down to move, Enter to select");
     }
 
     private void seleccionarOpcionAnterior(){
@@ -86,7 +84,7 @@ public class PantallaMenuPrincipal implements Pantalla {
             case IND_JUGAR:
                 return this;
 
-            case IND_BESTIARIO:
+            case IND_CATALOGOS:
                 return pantallaFactory.crearCatalogoCriaturas(this);
 
             case IND_AYUDA:

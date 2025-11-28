@@ -25,7 +25,7 @@ public class PantallaCatalogoCartas implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CARTAS);
+        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CARTAS, true);
 
         // TODO: mostrar listado de cartas, navegacion paginada, opcion para crear, editar y eliminar cartas.
         //       los nombres de las cartas tienen que estar coloreados segun la clase.

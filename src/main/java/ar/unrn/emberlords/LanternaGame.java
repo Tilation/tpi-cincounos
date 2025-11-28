@@ -8,7 +8,9 @@ import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
+import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;
 
+import java.awt.*;
 import java.io.IOException;
 
 /**
@@ -28,8 +30,23 @@ public class LanternaGame {
 
     public void start() {
         try {
-            // Configuracion de lanterna
-            Terminal terminal = new DefaultTerminalFactory().createTerminal();
+            // Configuracion de lanterna y fuentes.
+            DefaultTerminalFactory factory = new DefaultTerminalFactory();
+            factory.setForceAWTOverSwing(true);
+
+            // Agrando la fuente para que se vea mejor
+            /*
+            * Fuentes que se ven bien en tamaño 16: (de las que tengo instaladas)
+            * - cascadia code
+            * - cascadia mono
+            * - lucida console
+            * */
+            Font mono = new Font("lucida console", Font.PLAIN, 16);
+
+            AWTTerminalFontConfiguration myFontConfiguration = AWTTerminalFontConfiguration.newInstance(mono);
+            factory.setTerminalEmulatorFontConfiguration(myFontConfiguration);
+
+            Terminal terminal = factory.createTerminal();
             screen = new TerminalScreen(terminal);
             screen.startScreen();
             screen.setCursorPosition(null); // Hide cursor

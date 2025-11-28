@@ -27,7 +27,7 @@ public class PantallaCatalogoCriaturas implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CRIATURAS);
+        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CRIATURAS, true);
 
         // TODO: mostrar listado de criaturas, navegacion paginada, opcion para crear, editar y eliminar criaturas.
         //       los nombres de las criaturas tienen que estar coloreados segun la clase.
