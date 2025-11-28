@@ -26,6 +26,7 @@ public class PantallaCatalogoPartes implements Pantalla {
 
         PantallaHelpers.dibujarMarco(screen, tg);
         PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_PARTES, true);
+        PantallaHelpers.dibujarPie(screen, tg, PantallaHelpers.PIE_CATALOGOS, '█', true);
 
         // TODO: mostrar listado de partes, navegacion paginada, opcion para crear, editar y eliminar partes.
         //       los nombres de las partes tienen que estar coloreados segun la clase.

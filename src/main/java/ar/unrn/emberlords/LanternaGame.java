@@ -41,7 +41,7 @@ public class LanternaGame {
             * - cascadia mono
             * - lucida console
             * */
-            Font mono = new Font("lucida console", Font.PLAIN, 16);
+            Font mono = new Font("cascadia mono", Font.PLAIN, 16);
 
             AWTTerminalFontConfiguration myFontConfiguration = AWTTerminalFontConfiguration.newInstance(mono);
             factory.setTerminalEmulatorFontConfiguration(myFontConfiguration);

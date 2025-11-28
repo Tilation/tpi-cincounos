@@ -10,11 +10,12 @@ import com.googlecode.lanterna.screen.Screen;
  */
 public class PantallaHelpers {
 
-    public static final String TITULO_CATALOGO_CARTAS =    "   Partes <- Cartas    -> Clases   ";
-    public static final String TITULO_CATALOGO_CLASES =    "   Cartas <- Clases    -> Criaturas";
-    public static final String TITULO_CATALOGO_CRIATURAS = "   Clases <- Criaturas -> Partes   ";
-    public static final String TITULO_CATALOGO_PARTES =    "Criaturas <- Partes    -> Cartas   ";
-
+    //→←
+    public static final String TITULO_CATALOGO_CARTAS =    "   Partes ← Cartas    → Clases   ";
+    public static final String TITULO_CATALOGO_CLASES =    "   Cartas ← Clases    → Criaturas";
+    public static final String TITULO_CATALOGO_CRIATURAS = "   Clases ← Criaturas → Partes   ";
+    public static final String TITULO_CATALOGO_PARTES =    "Criaturas ← Partes    → Cartas   ";
+    public static final String PIE_CATALOGOS = "←→: cambiar de catalogo | ↑↓: navegar | enter: seleccionar | esc: volver";
     public static void dibujarMarco(Screen screen, TextGraphics tg) {
         TerminalSize size = screen.getTerminalSize();
         tg.drawRectangle(new TerminalPosition(0,0), size, '█');
@@ -35,7 +36,7 @@ public class PantallaHelpers {
         int textRow = separatorRow + 1;
         int startColumn = 0;
         if (centradoHorizontalmente) {
-            startColumn = (ancho - pie.length()) / 2;
+            startColumn = (ancho - 4 - pie.length()) / 2;
         }
 
         tg.drawLine(0, separatorRow, size.getColumns(), separatorRow, separador);
