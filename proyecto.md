@@ -25,3 +25,8 @@ En vez de leer Strings del scanner, se leen KeyStroke de Lanterna, y en vez de e
 El proyecto esta fragmentado en diferentes "pantallas" con el patron State, esto permite intercambiar los menu y no perder la informacion o el estado.
 
 Las pantallas se intercambian en tiempo de ejecucion para brindar una experiencia rica y dinamica.
+
+
+## Pantallas y transiciones
+
+![](./pantallas.png)
