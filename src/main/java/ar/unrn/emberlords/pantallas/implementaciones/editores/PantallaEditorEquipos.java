@@ -1,22 +1,20 @@
-package ar.unrn.emberlords.pantallas.implementaciones;
+package ar.unrn.emberlords.pantallas.implementaciones.editores;
 
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
 import ar.unrn.emberlords.pantallas.PantallaFactory;
 import ar.unrn.emberlords.pantallas.PantallaHelpers;
-import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 
-public class PantallaCatalogoCriaturas implements Pantalla {
-
+public class PantallaEditorEquipos implements Pantalla {
     private final GameServiceFactory gameServiceFactory;
     private final Pantalla pantallaAnterior;
     private final PantallaFactory pantallaFactory;
 
-    public PantallaCatalogoCriaturas(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
+    public PantallaEditorEquipos(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
         this.gameServiceFactory = gameServiceFactory;
         this.pantallaAnterior = pantallaAnterior;
         this.pantallaFactory = pantallaFactory;
@@ -27,10 +25,10 @@ public class PantallaCatalogoCriaturas implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CRIATURAS, true);
+        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CARTAS, true);
         PantallaHelpers.dibujarPie(screen, tg, PantallaHelpers.PIE_CATALOGOS, '█', true);
-        // TODO: mostrar listado de criaturas, navegacion paginada, opcion para crear, editar y eliminar criaturas.
-        //       los nombres de las criaturas tienen que estar coloreados segun la clase.
+        // TODO: mostrar listado de cartas, navegacion paginada, opcion para crear, editar y eliminar cartas.
+        //       los nombres de las cartas tienen que estar coloreados segun la clase.
     }
 
     @Override
@@ -43,11 +41,11 @@ public class PantallaCatalogoCriaturas implements Pantalla {
                 break;
             }
             case KeyType.ArrowLeft: {
-                retorno = pantallaFactory.crearCatalogoClases(pantallaAnterior);
+                retorno = pantallaFactory.crearCatalogoPartes(pantallaAnterior);
                 break;
             }
             case KeyType.ArrowRight: {
-                retorno = pantallaFactory.crearCatalogoPartes(pantallaAnterior);
+                retorno = pantallaFactory.crearCatalogoClases(pantallaAnterior);
             }
         }
 

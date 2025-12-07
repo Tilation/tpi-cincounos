@@ -5,10 +5,22 @@ import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
 
+import java.awt.*;
+
 /**
  * Clase de ayuda para el dibujado de elementos de la interfaz grafica.
  */
 public class PantallaHelpers {
+
+    public static class OpcionesPintadoMenu {
+        public static OpcionesPintadoMenu defecto() {
+            return new OpcionesPintadoMenu();
+        }
+    }
+
+    public static class MenuItem {
+
+    }
 
     //→←
     public static final String TITULO_CATALOGO_CARTAS =    "   Partes ← Cartas    → Clases   ";
@@ -19,6 +31,14 @@ public class PantallaHelpers {
     public static void dibujarMarco(Screen screen, TextGraphics tg) {
         TerminalSize size = screen.getTerminalSize();
         tg.drawRectangle(new TerminalPosition(0,0), size, '█');
+    }
+
+    public static void dibujarMenu(TerminalPosition posicion, MenuItem[] items, int itemSeleccionado) {
+        dibujarMenu(posicion, items, itemSeleccionado, OpcionesPintadoMenu.defecto());
+    }
+
+    public static void dibujarMenu(TerminalPosition posicion, MenuItem[] items, int itemSeleccionado, OpcionesPintadoMenu opcionesPintadoMenu) {
+
     }
 
     public static void dibujarMarco(Screen screen, TextGraphics tg, char caracter) {

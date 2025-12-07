@@ -1,4 +1,4 @@
-package ar.unrn.emberlords.pantallas.implementaciones;
+package ar.unrn.emberlords.pantallas.implementaciones.editores;
 
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
@@ -9,12 +9,12 @@ import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 
-public class PantallaCatalogoCartas implements Pantalla {
+public class PantallaEditorCriaturas implements Pantalla {
     private final GameServiceFactory gameServiceFactory;
     private final Pantalla pantallaAnterior;
     private final PantallaFactory pantallaFactory;
 
-    public PantallaCatalogoCartas(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
+    public PantallaEditorCriaturas(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
         this.gameServiceFactory = gameServiceFactory;
         this.pantallaAnterior = pantallaAnterior;
         this.pantallaFactory = pantallaFactory;

@@ -1,4 +1,4 @@
-package ar.unrn.emberlords.pantallas.implementaciones;
+package ar.unrn.emberlords.pantallas.implementaciones.catalogos;
 
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
@@ -9,12 +9,12 @@ import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 
-public class PantallaCatalogoPartes implements Pantalla {
+public class PantallaCatalogoClases implements Pantalla {
     private final GameServiceFactory gameServiceFactory;
     private final Pantalla pantallaAnterior;
     private final PantallaFactory pantallaFactory;
 
-    public PantallaCatalogoPartes(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
+    public PantallaCatalogoClases(GameServiceFactory gameServiceFactory, Pantalla pantallaAnterior, PantallaFactory pantallaFactory) {
         this.gameServiceFactory = gameServiceFactory;
         this.pantallaAnterior = pantallaAnterior;
         this.pantallaFactory = pantallaFactory;
@@ -25,11 +25,10 @@ public class PantallaCatalogoPartes implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_PARTES, true);
+        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CLASES, true);
         PantallaHelpers.dibujarPie(screen, tg, PantallaHelpers.PIE_CATALOGOS, '█', true);
-
-        // TODO: mostrar listado de partes, navegacion paginada, opcion para crear, editar y eliminar partes.
-        //       los nombres de las partes tienen que estar coloreados segun la clase.
+        // TODO: mostrar listado de cartas, navegacion paginada, opcion para crear, editar y eliminar cartas.
+        //       los nombres de las cartas tienen que estar coloreados segun la clase.
     }
 
     @Override
@@ -42,11 +41,11 @@ public class PantallaCatalogoPartes implements Pantalla {
                 break;
             }
             case KeyType.ArrowLeft: {
-                retorno = pantallaFactory.crearCatalogoCriaturas(pantallaAnterior);
+                retorno = pantallaFactory.crearCatalogoCartas(pantallaAnterior);
                 break;
             }
             case KeyType.ArrowRight: {
-                retorno = pantallaFactory.crearCatalogoCartas(pantallaAnterior);
+                retorno = pantallaFactory.crearCatalogoCriaturas(pantallaAnterior);
             }
         }
 

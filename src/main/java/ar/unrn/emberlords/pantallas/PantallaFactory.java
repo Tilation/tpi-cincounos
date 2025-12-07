@@ -2,6 +2,10 @@ package ar.unrn.emberlords.pantallas;
 
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.implementaciones.*;
+import ar.unrn.emberlords.pantallas.implementaciones.catalogos.PantallaCatalogoCartas;
+import ar.unrn.emberlords.pantallas.implementaciones.catalogos.PantallaCatalogoClases;
+import ar.unrn.emberlords.pantallas.implementaciones.catalogos.PantallaCatalogoCriaturas;
+import ar.unrn.emberlords.pantallas.implementaciones.catalogos.PantallaCatalogoPartes;
 
 /**
  * Clase que se encarga de la fabricacion y configuracion de las pantallas para ser usadas.
