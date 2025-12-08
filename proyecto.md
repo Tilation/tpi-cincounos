@@ -30,3 +30,17 @@ Las pantallas se intercambian en tiempo de ejecucion para brindar una experienci
 ## Pantallas y transiciones
 
 ![](./pantallas.png)
+
+Las pantallas son las <u>vistas</u> de la implementación del modelo **MVP**.
+
+Las vistas se construyen con un <u>presenter</u> y estos se comunican eventos en particular.
+
+# Interacciones entre las partes del modelo MVP:
+
+| Actividad            | ...al monitor    | ...a la vista                 | ...al Presenter         | ...al repositorio       |
+|----------------------|------------------|-------------------------------|-------------------------|-------------------------|
+| Teclado envia...     | ---              | KeyCodes (Input crudo)        | ---                     | ---                     |
+| Vista envia...       | Dibujado y texto | ---                           | Eventos UI particulares | ---                     |
+| Presenter envia...   | ---              | Datos primitivos para mostrar | ---                     | Entidades ó solicitudes |
+| Repositorio envia... | ---              | ---                           | Entidades               | ---                     | 
+
