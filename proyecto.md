@@ -44,3 +44,23 @@ Las vistas se construyen con un <u>presenter</u> y estos se comunican eventos en
 | Presenter envia...   | ---              | Datos primitivos para mostrar | ---                     | Entidades ó solicitudes |
 | Repositorio envia... | ---              | ---                           | Entidades               | ---                     | 
 
+
+
+```mermaid
+%% Las funciones que se detallan en el grafico son plenamente
+%% pseudocodigo, no son funciones reales.
+sequenceDiagram
+    participant io as Teclado | Monitor
+    participant view as Vista<Recurso>
+    participant presenter as Presenter<Recurso>
+    participant repository as Repositorio<Recurso>
+
+    io ->> view: onKeyDown(KeyCode: Down)
+    view ->> presenter: seleccionarSiguiente()
+    presenter --> presenter: selectedIndex = selectedIndex + 1
+    note over io,presenter: N cantidad de eventos 
+    io ->> view: onKeyDown(KeyCode: Enter)
+    view ->> presenter: confirmarOpcion()
+    presenter --> presenter: opcionSeleccionada = guardar
+    presenter ->> repository: guardarCambios()
+```

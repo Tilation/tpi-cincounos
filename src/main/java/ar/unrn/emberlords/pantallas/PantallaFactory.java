@@ -74,4 +74,8 @@ public class PantallaFactory {
     public Pantalla crearSalidaDelJuego() {
         return null;
     }
+
+    public Pantalla crearDebug(PantallaMenuPrincipal pantallaMenuPrincipal) {
+        return new PantallaDebugCaracteres(this);
+    }
 }

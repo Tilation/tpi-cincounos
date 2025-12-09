@@ -9,9 +9,13 @@ import com.googlecode.lanterna.screen.TerminalScreen;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;
+import com.googlecode.lanterna.terminal.swing.SwingTerminalFontConfiguration;
 
 import java.awt.*;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Clase que une los componentes graficos e interactivos del juego, administra la pantalla activa, le envia la entrada
@@ -33,7 +37,6 @@ public class LanternaGame {
             // Configuracion de lanterna y fuentes.
             DefaultTerminalFactory factory = new DefaultTerminalFactory();
             factory.setForceAWTOverSwing(true);
-
             // Agrando la fuente para que se vea mejor
             /*
             * Fuentes que se ven bien en tamaño 16: (de las que tengo instaladas)
@@ -41,8 +44,22 @@ public class LanternaGame {
             * - cascadia mono
             * - lucida console
             * */
-            Font mono = new Font("cascadia mono", Font.PLAIN, 16);
+            Font mono;
 
+            //mono = new Font("cascadia mono", Font.PLAIN, 24);
+
+            try (InputStream fontStream = Files.newInputStream(FilePaths.getFontFile()))
+            {
+                if (fontStream == null) {
+                    throw new IOException(String.format("El archivo de fuente: {0} no existe!", FilePaths.getFontFile().getFileName()));
+                } else {
+                    Font customFont = Font.createFont(Font.TRUETYPE_FONT, fontStream);
+                    mono = customFont.deriveFont(24f);
+                }
+            } catch (FontFormatException e) {
+                throw new RuntimeException(e);
+            }
+            
             AWTTerminalFontConfiguration myFontConfiguration = AWTTerminalFontConfiguration.newInstance(mono);
             factory.setTerminalEmulatorFontConfiguration(myFontConfiguration);
 

@@ -16,6 +16,7 @@ public class FilePaths {
         root = System.getProperty("user.dir");
     }
 
+    public static Path getFontFile() {return Paths.get(root, "cascadiamono.ttf"); }
     public static Path getRootDirectory() {
         return Paths.get(root);
     }

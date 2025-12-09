@@ -15,12 +15,13 @@ public class PantallaMenuPrincipal implements Pantalla {
     private final PantallaFactory pantallaFactory;
     private int selectedOption = 0;
 
-    private static final String[] options = {"Jugar Batalla", "Catalogos", "Ayuda", "Salir"};
+    private static final String[] options = {"Jugar Batalla", "Catalogos", "Ayuda", "Salir", "Debug"};
 
     private static final int IND_JUGAR = 0;
     private static final int IND_CATALOGOS = 1;
     private static final int IND_AYUDA = 2;
     private static final int IND_SALIR = 3;
+    private static final int IND_DEBUG = 4;
 
     public PantallaMenuPrincipal(GameServiceFactory serviceFactory, PantallaFactory pantallaFactory) {
         this.serviceFactory = serviceFactory;
@@ -32,7 +33,7 @@ public class PantallaMenuPrincipal implements Pantalla {
         TextGraphics tg = screen.newTextGraphics();
 
         PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, "███████████▓▒░ Menu principal ░▒▓███████████", true);
+        PantallaHelpers.dibujarTitulo(screen, tg, "Menu principal", true);
 
         PantallaHelpers.dibujarPie(screen, tg, "↑↓: navegar | enter: seleccionar | esc: salir", '█', true);
 
@@ -92,7 +93,8 @@ public class PantallaMenuPrincipal implements Pantalla {
 
             case IND_SALIR:
                 return null;
-
+            case IND_DEBUG:
+                return pantallaFactory.crearDebug(this);
             default:
                 return this;
         }
