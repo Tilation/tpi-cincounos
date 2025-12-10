@@ -3,7 +3,7 @@ package ar.unrn.emberlords.pantallas.implementaciones.catalogos;
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
 import ar.unrn.emberlords.pantallas.PantallaFactory;
-import ar.unrn.emberlords.pantallas.PantallaHelpers;
+import ar.unrn.emberlords.pantallas.PantallaHelper;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
@@ -24,10 +24,10 @@ public class PantallaCatalogoCriaturas implements Pantalla {
     @Override
     public void render(Screen screen) {
         TextGraphics tg = screen.newTextGraphics();
-
-        PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, PantallaHelpers.TITULO_CATALOGO_CRIATURAS, true);
-        PantallaHelpers.dibujarPie(screen, tg, PantallaHelpers.PIE_CATALOGOS, '█', true);
+        PantallaHelper helper = new PantallaHelper(tg);
+        helper.dibujarMarco();
+        helper.dibujarTitulo( PantallaHelper.TITULO_CATALOGO_CRIATURAS, true);
+        helper.dibujarPie( PantallaHelper.PIE_CATALOGOS, '█', true);
         // TODO: mostrar listado de criaturas, navegacion paginada, opcion para crear, editar y eliminar criaturas.
         //       los nombres de las criaturas tienen que estar coloreados segun la clase.
     }

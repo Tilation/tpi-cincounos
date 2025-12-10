@@ -3,7 +3,7 @@ package ar.unrn.emberlords.pantallas.implementaciones;
 import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
 import ar.unrn.emberlords.pantallas.PantallaFactory;
-import ar.unrn.emberlords.pantallas.PantallaHelpers;
+import ar.unrn.emberlords.pantallas.PantallaHelper;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -30,11 +30,11 @@ public class PantallaSeleccionTipoBatalla implements Pantalla {
     @Override
     public void render(Screen screen) {
         TextGraphics tg = screen.newTextGraphics();
+        PantallaHelper helper = new PantallaHelper(tg);
+        helper.dibujarMarco();
+        helper.dibujarTitulo("███████████▓▒░ Menu principal ░▒▓███████████", true);
 
-        PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, "███████████▓▒░ Menu principal ░▒▓███████████", true);
-
-        PantallaHelpers.dibujarPie(screen, tg, "↑↓: navegar | enter: seleccionar | esc: salir", '█', true);
+        helper.dibujarPie("↑↓: navegar | enter: seleccionar | esc: salir", '█', true);
 
         for (int i = 0; i < options.length; i++) {
             if (i == selectedOption) {

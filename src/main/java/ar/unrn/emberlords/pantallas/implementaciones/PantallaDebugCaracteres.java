@@ -1,10 +1,8 @@
 package ar.unrn.emberlords.pantallas.implementaciones;
 
-import ar.unrn.emberlords.game.GameServiceFactory;
 import ar.unrn.emberlords.pantallas.Pantalla;
 import ar.unrn.emberlords.pantallas.PantallaFactory;
-import ar.unrn.emberlords.pantallas.PantallaHelpers;
-import com.googlecode.lanterna.TextColor;
+import ar.unrn.emberlords.pantallas.PantallaHelper;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
@@ -22,11 +20,12 @@ public class PantallaDebugCaracteres implements Pantalla {
     @Override
     public void render(Screen screen) {
         TextGraphics tg = screen.newTextGraphics();
+        PantallaHelper helper = new PantallaHelper(tg);
 
-        PantallaHelpers.dibujarMarco(screen, tg);
-        PantallaHelpers.dibujarTitulo(screen, tg, "Debug", true);
+        helper.dibujarMarco();
+        helper.dibujarTitulo("Debug", true);
 
-        PantallaHelpers.dibujarPie(screen, tg, "esc: salir", '█', true);
+        helper.dibujarPie("esc: salir", '█', true);
 
         var terminalSize = screen.getTerminalSize();
         int columns = terminalSize.getColumns() - 4;
